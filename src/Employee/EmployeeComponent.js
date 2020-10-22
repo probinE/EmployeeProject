@@ -3,7 +3,7 @@ import './App.css';
 import { Card, CardBody, Col, Row, Button } from 'reactstrap';
 import { MDBTableBody } from 'mdbreact';
 import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/grid';
+// import Grid from '@material-ui/core/grid';
 import { DropDownList } from '@progress/kendo-react-dropdowns';
 import mobiscroll from '@mobiscroll/react-lite';
 import '@mobiscroll/react-lite/dist/css/mobiscroll.min.css';
@@ -45,8 +45,8 @@ class Employees extends Component {
                             </div>
                             {this.state.Filter === false ? (
                                 <CardBody>
-                                    <Grid container spacing={3} style={{ paddingLeft: "25%", margin: "0px" }}>
-                                        <Grid item xs={12} s sm={3}>
+                                    {/* <Grid container spacing={3} style={{ paddingLeft: "25%", margin: "0px" }}>
+                                        <Grid item xs={12} s sm={3}> */}
                                             <DropDownList
                                                 error={this.state.ErrorEmpStatus}
                                                 name="EmployeeStatusFilter"
@@ -58,12 +58,12 @@ class Employees extends Component {
                                                 valueField="value"
                                                 textField="text"
                                             />
-                                        </Grid>
-                                        <Grid sm={3} style={{ marginTop: "22px" }}>
+                                        {/* </Grid>
+                                        <Grid sm={3} style={{ marginTop: "22px" }}> */}
                                             <Button className="btnsecondarynew" onClick={this.getEmployees}>Get</Button>
                                             <Button className="btnsecondarynew" style={{ marginLeft: "3%" }} onClick={this.ToggleEmployee}>Add New</Button>
-                                        </Grid>
-                                    </Grid>
+                                        {/* </Grid>
+                                    </Grid> */}
                                     {this.state.Dashboard === true ? (<div style={{ textAlign: "center", paddingLeft: "15%", paddingRight: "15%" }}>
                                         <EmployeeDashboard EmployeeDashBoard={this.state.EmployeeDetails} />
                                     </div>) : ""
@@ -71,8 +71,8 @@ class Employees extends Component {
                                 </CardBody >
                             ) :
                                 (<CardBody>
-                                    <Grid container spacing={3} style={{ paddingLeft: "25%", margin: "0px" }}>
-                                        <Grid item xs={12} s sm={3}>
+                                    {/* <Grid container spacing={3} style={{ paddingLeft: "25%", margin: "0px" }}>
+                                        <Grid item xs={12} s sm={3}> */}
                                             <TextField
                                                 required
                                                 name="EmployeeName"
@@ -82,8 +82,8 @@ class Employees extends Component {
                                                 onChange={this.OnChangeEmployees}
                                                 error={this.state.ErrorEmpName}
                                             />
-                                        </Grid>
-                                        <Grid item xs={12} s sm={3}>
+                                        {/* </Grid>
+                                        <Grid item xs={12} s sm={3}> */}
                                             <DropDownList
                                                 error={this.state.ErrorEmpStatus}
                                                 name="EmployeeStatus"
@@ -95,13 +95,13 @@ class Employees extends Component {
                                                 valueField="value"
                                                 textField="text"
                                             />
-                                        </Grid>
-                                        <Grid sm={3} style={{ marginTop: "22px" }}>
+                                        {/* </Grid>
+                                        <Grid sm={3} style={{ marginTop: "22px" }}> */}
                                             <Button className="btnsecondarynew" onClick={this.AddEmployees}>Submit</Button>
                                             <Button className="btnsecondarynew" style={{ marginLeft: "3%" }} onClick={this.ToggleEmployee}>Cancel</Button>
                                             <Button className="btnsecondarynew" style={{ marginLeft: "3%" }} onClick={this.ClearEmployee}>Clear</Button>
-                                        </Grid>
-                                    </Grid>
+                                        {/* </Grid>
+                                    </Grid> */}
                                 </CardBody >)
                             }
                         </Card >
