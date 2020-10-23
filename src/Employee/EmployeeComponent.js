@@ -141,7 +141,7 @@ class Employees extends Component {
             cancelText: 'No',
             callback: (res) => {
                 mobiscroll.toast({
-                    message: res ? this.InactiveStatus(SeqID) : 'Alert closed',
+                    message: res ? this.InactiveStatus(SeqID) : 'Alert closed.',
                     display: 'bottom',
                     color: 'white',
                     width: '1px',
